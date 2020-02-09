@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="cards">
+
+        {% for recipe in receipts %}
+
+            <div id="burger.png" class="card">
+                <div class="card-image-conteiner">
+                    <img src="{{ recipe.image }}" alt="{{recipe.title}}">
+                </div>
+                <div class="card-title">
+                    <h1>{{ recipe.title }}</h1>
+                </div>
+                <div class="card-author">
+                    <h2>{{ recipe.author }}</h2>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+    <script src="/script.js"></script>
+
+{% endblock %}

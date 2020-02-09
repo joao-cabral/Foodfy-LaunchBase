@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="background-img">
+        <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+    </div>
+
+    <div class="info-food">
+        <div class="title-food">
+            <h1>Triplo bacon burger</h1>
+            <h2>por Jorge Relato</h2>
+        </div>
+    </div>
+    <div class="box-info">
+        
+        <h2 class="inline-box">Ingredientes</h2>
+        <a id="action" class="inline-box cursor">Esconder</a>
+        
+        <ul id="lista0" class="info-list">
+            {% for i in recipe.ingredients %}
+                <li>{{i}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+     <div class="box-info">
+        
+        <h2 class="inline-box">Mode de preparo</h2>
+        <a id="action" class="inline-box cursor">Esconder</a>
+        
+        <ul id="lista1" class="info-list">
+            {% for i in recipe.preparation %}
+                <li>{{i}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="box-info">
+        <h2 class="inline-box">Informaçõe adicionais</h2>
+        <a id="action" class="inline-box cursor">Esconder</a>
+        <p id="lista2">{{ recipe.information }}</p>
+    </div>
+
+    <div class="box-info">
+        <div class="footer-size">
+        </div>
+    </div>
+    
+    <script src="/script.js"></script>
+
+{% endblock %}
